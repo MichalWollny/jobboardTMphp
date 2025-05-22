@@ -1,62 +1,54 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Wir entwickeln eine browserbasierte Anwendung zur Verwaltung von Stellenanzeigen. Diese Anwendung bietet eine Vielzahl von Funktionen, um die Verwaltung von Stellenanzeigen effizient und benutzerfreundlich zu gestalten.
+
+## Vorbereitungen
+Erstellen Sie ein GIT-Projekt und committen Sie die Schritte einzeln. Alle Projektdateien sollten im Repository enthalten sein.
+Aufgaben
+
+## Aufgabe 1 - Konzept
+
+Visualisieren Sie den Aufbau Ihrer Anwendung mit einer einfachen Skizze. Ihre Darstellung sollte die folgenden Informationen enthalten:
+
+- Sitemap: Welche Seiten hat die Anwendung?
+- Modelle: Welche Modelle gibt es und welche Attribute/Datenbankspalten haben diese?
+- Beziehungen: Welche Beziehungen haben die Modelle zueinander?
+- Benutzerrechte: Welche Rechte haben User?
+
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+Sitemap
+<a><img src="GitHubReadmeStuff/Sitemap.png" alt="Sitemap"></a>
+ER-Modell
+<a><img src="GitHubReadmeStuff/ER Modell.png" alt="ER-Modell"></a>
 </p>
 
-## About Laravel
+## Aufgabe 2 - Installation
+Setzen Sie eine saubere Installation mit Laravel auf. Halten Sie sich an die Laravel-Dokumentation.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Ziel: Aufrufen der “Hello World” Seite.**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Aufgabe 3 - Modelle und Controller
+Erstellen Sie alle Modelle zusammen mit den dazugehörigen Controllern, Migrations, Policies und Co.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Tipp: Nutzen Sie das Terminal: sail artisan make:model Job --all**
+Füllen Sie die angelegten Dateien mit Inhalten, insbesondere die Migrations und die korrekten Datenbankspalten.
 
-## Learning Laravel
+## Aufgabe 4 - Ansichten
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Erstellen Sie zu jedem Modell:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Eine Listenansicht
+Eine Detailansicht
+Eine Erstellungs-/Bearbeitungsansicht
+Verknüpfen Sie die Ansichten mit den Controllern.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**Ziel: Alle Ansichten sind mit den Controllern verknüpft und zeigen die gewünschten Datenbankinhalte an bzw. erlauben die Bearbeitung.**
 
-## Laravel Sponsors
+## Optionale Aufgaben
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Verknüpfen Sie die Policies mit den Controllern.
+- Fügen Sie Ihrer Anwendung Unit Tests hinzu.
+- Integrieren Sie in eins Ihrer Formulare einen Bilderupload.
+- Nutzen Sie den Cache für einige Abfragen.
+- Integrieren Sie dynamische Breadcrumbs.
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# jobboardTMphp
+Überlegen Sie sich eigene Features.
