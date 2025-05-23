@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Job;
 
 class JobController extends Controller
 {
+    // Returns Blade view (HTML)
     public function index()
     {
         $jobs = [
@@ -15,5 +17,12 @@ class JobController extends Controller
         ];
 
         return view('jobs.index', ['jobs' => $jobs]);
+    }
+
+    // Returns real DB data as JSON
+    public function json()
+    {
+        $jobs = Job::with(['company', 'category'])->get();
+        return response()->json($jobs);
     }
 }

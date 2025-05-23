@@ -3,65 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Models\Application;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreApplicationRequest;
-use App\Http\Requests\UpdateApplicationRequest;
+use Illuminate\Http\Request;
 
 class ApplicationController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $applications = [
+            ['id' => 1, 'user' => 'Joe Seeker', 'job' => 'PHP Developer', 'status' => 'pending'],
+            ['id' => 2, 'user' => 'Jane Smith', 'job' => 'Backend Engineer', 'status' => 'reviewed'],
+        ];
+
+        return view('applications.index', ['applications' => $applications]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function json()
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreApplicationRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Application $application)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Application $application)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateApplicationRequest $request, Application $application)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Application $application)
-    {
-        //
+        return response()->json(Application::with(['job', 'user'])->get());
     }
 }
